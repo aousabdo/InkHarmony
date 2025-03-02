@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ status.metadata.title }} - InkHarmony</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .cover-img {
+            max-width: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .progress-timeline {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .progress-timeline::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #dee2e6;
+            z-index: 0;
+        }
+        
+        .timeline-phase {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .timeline-phase .phase-icon {
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+            background-color: #f8f9fa;
+            margin: 0 auto 10px;
+            border: 3px solid #dee2e6;
+            font-size: 24px;
+        }
+        
+        .timeline-phase.active .phase-icon {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+        
+        .timeline-phase.completed .phase-icon {
+            background-color: #198754;
+            color: white;
+            border-color: #198754;
+        }
+        
+        .chapter-content {
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-line;
+        }
+        
+        .tab-content {
+            padding: 20px 0;
+        }
+        
+        #task-form {
+            display: none;
+        }
+        
+        #task-results {
+            display: none;
+            margin-top: 20px;
+        }
+        
+        #task-spinner {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span class="fw-bold">InkHarmony</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Book Details</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h1>{{ status.metadata.title }}</h1>
+                <p class="text-muted">{{ status.metadata.genre|capitalize }} | {{ status.metadata.target_audience }}</p>
+                <div class="mb-3">
+                    <span class="badge bg-{{ 'success' if status.status == 'completed' else 'primary' if status.status == 'running' else 'warning' }}">{{ status.status|upper }}</span>
+                    <span class="badge bg-info">Phase: {{ status.current_phase|default('Initialization') }}</span>
+                </div>
+                <p>{{ status.metadata.description }}</p>
+            </div>
+            <div class="col-md-4 text-center">
+                {% if has_cover %}
+                <img src="{{ url_for('book_cover', book_id=book_id) }}" class="cover-img" alt="Book Cover">
+                {% else %}
+                <div class="border p-5 text-center">
+                    <p class="text-muted">Cover not yet generated</p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header">
+                        <h4 class="mb-0">Progress</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="progress-timeline">
+                            <div class="row">
+                                {% set phases = ['initialization', 'outline_creation', 'content_creation', 'review_refinement', 'production'] %}
+                                {% set phase_icons = ['🚀', '📝', '📚', '✏️', '📦'] %}
+                                {% set phase_names = ['Initialization', 'Outline Creation', 'Content Creation', 'Review & Refinement', 'Production'] %}
+                                
+                                {% for phase in phases %}
+                                    {% set phase_status = status.phases[phase].status %}
+                                    {% set is_active = status.current_phase == phase %}
+                                    {% set is_completed = phase_status == 'completed' %}
+                                    
+                                    <div class="col timeline-phase {{ 'active' if is_active else 'completed' if is_completed else '' }}">
+                                        <div class="phase-icon">{{ phase_icons[loop.index0] }}</div>
+                                        <p class="phase-name">{{ phase_names[loop.index0] }}</p>
+                                        <p class="phase-status small">{{ phase_status|capitalize }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center mt-4">
+                            <button id="progress-workflow" class="btn btn-primary" data-action="next">Advance to Next Phase</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="bookTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="outline-tab" data-bs-toggle="tab" data-bs-target="#outline-tab-pane" type="button" role="tab">Outline</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="chapters-tab" data-bs-toggle="tab" data-bs-target="#chapters-tab-pane" type="button" role="tab">Chapters</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tasks-tab" data-bs-toggle="tab" data-bs-target="#tasks-tab-pane" type="button" role="tab">Tasks</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="export-tab" data-bs-toggle="tab" data-bs-target="#export-tab-pane" type="button" role="tab">Export</button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="bookTabsContent">
+                    <!-- Outline Tab -->
+                    <div class="tab-pane fade show active" id="outline-tab-pane" role="tabpanel" aria-labelledby="outline-tab" tabindex="0">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                {% if content.outline %}
+                                    <h4>Synopsis</h4>
+                                    <p>{{ content.outline.synopsis }}</p>
+                                    
+                                    {% if content.outline.characters %}
+                                    <h4>Characters</h4>
+                                    <div class="row">
+                                        {% for character in content.outline.characters %}
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ character.name }}</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">{{ character.role }}</h6>
+                                                    <p class="card-text">{{ character.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                    
+                                    {% if content.outline.chapters %}
+                                    <h4>Chapter Structure</h4>
+                                    <div class="accordion" id="chapterAccordion">
+                                        {% for chapter in content.outline.chapters %}
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter{{ loop.index }}">
+                                                    Chapter {{ loop.index }}: {{ chapter.title }}
+                                                </button>
+                                            </h2>
+                                            <div id="chapter{{ loop.index }}" class="accordion-collapse collapse">
+                                                <div class="accordion-body">
+                                                    <p>{{ chapter.summary }}</p>
+                                                    
+                                                    {% if chapter.key_events %}
+                                                    <h6>Key Events</h6>
+                                                    <ul>
+                                                        {% for event in chapter.key_events %}
+                                                        <li>{{ event }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                {% else %}
+                                    <div class="alert alert-info">
+                                        <p>No outline has been created yet. Use the Tasks tab to generate an outline.</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chapters Tab -->
+                    <div class="tab-pane fade" id="chapters-tab-pane" role="tabpanel" aria-labelledby="chapters-tab" tabindex="0">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                {% if content.chapters %}
+                                    <div class="accordion" id="chaptersAccordion">
+                                        {% for chapter in content.chapters %}
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapterContent{{ loop.index }}">
+                                                    {{ chapter.name|replace('_', ' ')|title }}
+                                                </button>
+                                            </h2>
+                                            <div id="chapterContent{{ loop.index }}" class="accordion-collapse collapse">
+                                                <div class="accordion-body">
+                                                    <div class="chapter-content">{{ chapter.content }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    <div class="alert alert-info">
+                                        <p>No chapters have been written yet. Use the Tasks tab to generate chapters.</p>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tasks Tab -->
+                    <div class="tab-pane fade" id="tasks-tab-pane" role="tabpanel" aria-labelledby="tasks-tab" tabindex="0">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4>Assign a Task</h4>
+                                <p>Select the type of task to assign to an agent:</p>
+                                
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="list-group">
+                                            <button class="list-group-item list-group-item-action" data-task-type="outline" data-agent="outline">Create Book Outline</button>
+                                            <button class="list-group-item list-group-item-action" data-task-type="character_outline" data-agent="outline">Create Character Profiles</button>
+                                            <button class="list-group-item list-group-item-action" data-task-type="chapter" data-agent="narrative">Write a Chapter</button>
+                                            <button class="list-group-item list-group-item-action" data-task-type="polish_chapter" data-agent="linguistic">Polish a Chapter</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="list-group">
+                                            <button class="list-group-item list-group-item-action" data-task-type="cover_concept" data-agent="visual">Create Cover Concept</button>
+                                            <button class="list-group-item list-group-item-action" data-task-type="cover_art" data-agent="visual">Generate Cover Art</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Task Form (dynamic based on selection) -->
+                                <div id="task-form" class="card mt-3">
+                                    <div class="card-header">
+                                        <h5 id="task-form-title">Task Details</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <form id="task-details-form">
+                                            <input type="hidden" id="agent_id" name="agent_id">
+                                            <input type="hidden" id="task_type" name="task_type">
+                                            
+                                            <!-- Dynamic form fields will be added here -->
+                                            <div id="task-form-fields"></div>
+                                            
+                                            <button type="submit" class="btn btn-primary">Assign Task</button>
+                                            <button type="button" class="btn btn-secondary" id="cancel-task">Cancel</button>
+                                            
+                                            <div id="task-spinner" class="mt-3">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="spinner-border text-primary me-2" role="status"></div>
+                                                    <span>Processing task...</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <!-- Task Results -->
+                                <div id="task-results" class="card mt-3">
+                                    <div class="card-header">
+                                        <h5>Task Results</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="task-results-content"></div>
+                                        <button id="dismiss-results" class="btn btn-secondary mt-3">Dismiss</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Export Tab -->
+                    <div class="tab-pane fade" id="export-tab-pane" role="tabpanel" aria-labelledby="export-tab" tabindex="0">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <h4>Export Book</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Download Options</h5>
+                                                <div class="d-grid gap-2">
+                                                    <a href="{{ url_for('download_book', book_id=book_id, type='txt') }}" class="btn btn-outline-primary">Download as Text File</a>
+                                                    <a href="{{ url_for('download_book', book_id=book_id, type='json') }}" class="btn btn-outline-primary">Download as JSON</a>
+                                                    {% if has_cover %}
+                                                    <a href="{{ url_for('download_book', book_id=book_id, type='cover') }}" class="btn btn-outline-primary">Download Cover</a>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Full Export</h5>
+                                                <p>Export the complete book project including all components.</p>
+                                                <button id="export-book" class="btn btn-primary">Export Book</button>
+                                                <div id="export-spinner" class="mt-3" style="display: none;">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="spinner-border text-primary me-2" role="status"></div>
+                                                        <span>Exporting book...</span>
+                                                    </div>
+                                                </div>
+                                                <div id="export-result" class="alert alert-success mt-3" style="display: none;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>© 2025 InkHarmony. Powered by Claude and Stability AI.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Task selection
+            const taskButtons = document.querySelectorAll('[data-task-type]');
+            const taskForm = document.getElementById('task-form');
+            const taskFormTitle = document.getElementById('task-form-title');
+            const taskFormFields = document.getElementById('task-form-fields');
+            const agentIdInput = document.getElementById('agent_id');
+            const taskTypeInput = document.getElementById('task_type');
+            const cancelTaskBtn = document.getElementById('cancel-task');
+            const taskDetailsForm = document.getElementById('task-details-form');
+            const taskSpinner = document.getElementById('task-spinner');
+            const taskResults = document.getElementById('task-results');
+            const taskResultsContent = document.getElementById('task-results-content');
+            const dismissResultsBtn = document.getElementById('dismiss-results');
+            
+            // Progress workflow
+            const progressWorkflowBtn = document.getElementById('progress-workflow');
+            
+            // Export book
+            const exportBookBtn = document.getElementById('export-book');
+            const exportSpinner = document.getElementById('export-spinner');
+            const exportResult = document.getElementById('export-result');
+            
+            // Task buttons click handler
+            taskButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const taskType = this.getAttribute('data-task-type');
+                    const agentId = this.getAttribute('data-agent');
+                    
+                    // Set form values
+                    agentIdInput.value = agentId;
+                    taskTypeInput.value = taskType;
+                    
+                    // Set form title
+                    taskFormTitle.textContent = `${this.textContent} Details`;
+                    
+                    // Generate form fields based on task type
+                    generateFormFields(taskType);
+                    
+                    // Show the form
+                    taskForm.style.display = 'block';
+                    taskResults.style.display = 'none';
+                });
+            });
+            
+            // Cancel task button
+            cancelTaskBtn.addEventListener('click', function() {
+                taskForm.style.display = 'none';
+            });
+            
+            // Dismiss results button
+            dismissResultsBtn.addEventListener('click', function() {
+                taskResults.style.display = 'none';
+            });
+            
+            // Task form submit
+            taskDetailsForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show spinner
+                taskSpinner.style.display = 'block';
+                
+                // Get form data
+                const formData = new FormData(this);
+                
+                // Send task to server
+                fetch(`/book/{{ book_id }}/assign_task`, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    
+                    // Poll for task completion
+                    pollTaskStatus(data.task_id);
+                })
+                .catch(error => {
+                    taskSpinner.style.display = 'none';
+                    alert(`Error: ${error.message}`);
+                });
+            });
+            
+            // Progress workflow button
+            progressWorkflowBtn.addEventListener('click', function() {
+                const action = this.getAttribute('data-action');
+                const formData = new FormData();
+                formData.append('action', action);
+                
+                progressWorkflowBtn.disabled = true;
+                progressWorkflowBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Processing...';
+                
+                // Send progress request
+                fetch(`/book/{{ book_id }}/progress`, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    
+                    // Poll for completion
+                    pollTaskStatus(data.task_id, true);
+                })
+                .catch(error => {
+                    progressWorkflowBtn.disabled = false;
+                    progressWorkflowBtn.textContent = 'Advance to Next Phase';
+                    alert(`Error: ${error.message}`);
+                });
+            });
+            
+            // Export book button
+            exportBookBtn.addEventListener('click', function() {
+                exportBookBtn.disabled = true;
+                exportSpinner.style.display = 'block';
+                exportResult.style.display = 'none';
+                
+                // Send export request
+                fetch(`/book/{{ book_id }}/export`, {
+                    method: 'POST'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
+                    
+                    // Poll for completion
+                    pollTaskStatus(data.task_id, false, true);
+                })
+                .catch(error => {
+                    exportBookBtn.disabled = false;
+                    exportSpinner.style.display = 'none';
+                    alert(`Error: ${error.message}`);
+                });
+            });
+            
+            // Generate form fields based on task type
+            function generateFormFields(taskType) {
+                let fields = '';
+                
+                switch(taskType) {
+                    case 'character_outline':
+                        fields = `
+                            <div class="mb-3">
+                                <label for="character_count" class="form-label">Number of Characters</label>
+                                <input type="number" class="form-control" id="character_count" name="character_count" value="5" min="1" max="10">
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'chapter':
+                    case 'polish_chapter':
+                        fields = `
+                            <div class="mb-3">
+                                <label for="chapter_number" class="form-label">Chapter Number</label>
+                                <select class="form-select" id="chapter_number" name="chapter_number">
+                                    {% for chapter in chapters %}
+                                    <option value="{{ chapter }}">Chapter {{ chapter }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        `;
+                        break;
+                        
+                    case 'cover_art':
+                        fields = `
+                            <div class="mb-3">
+                                <label for="prompt" class="form-label">Cover Art Prompt (optional)</label>
+                                <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="Leave blank to use automatically generated prompt"></textarea>
+                                <div class="form-text">If left blank, a prompt will be generated automatically based on the book's concept.</div>
+                            </div>
+                        `;
+                        break;
+                }
+                
+                taskFormFields.innerHTML = fields;
+            }
+            
+            // Poll for task status
+            function pollTaskStatus(taskId, isWorkflowProgress = false, isExport = false) {
+                const pollInterval = setInterval(() => {
+                    fetch(`/task_status/${taskId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === 'completed') {
+                                clearInterval(pollInterval);
+                                
+                                if (isWorkflowProgress) {
+                                    // Refresh page to show updated status
+                                    window.location.reload();
+                                } else if (isExport) {
+                                    // Show export result
+                                    exportBookBtn.disabled = false;
+                                    exportSpinner.style.display = 'none';
+                                    exportResult.textContent = 'Book exported successfully!';
+                                    exportResult.style.display = 'block';
+                                } else {
+                                    // Show task results
+                                    taskSpinner.style.display = 'none';
+                                    taskForm.style.display = 'none';
+                                    
+                                    // Display results
+                                    taskResultsContent.innerHTML = `
+                                        <div class="alert alert-success">
+                                            <h5>Task Completed Successfully!</h5>
+                                            <p>The task has been completed. Refresh the page to see the results.</p>
+                                        </div>
+                                        <button class="btn btn-primary" onclick="window.location.reload()">Refresh Page</button>
+                                    `;
+                                    
+                                    taskResults.style.display = 'block';
+                                }
+                            } else if (data.status === 'failed') {
+                                clearInterval(pollInterval);
+                                
+                                if (isWorkflowProgress) {
+                                    progressWorkflowBtn.disabled = false;
+                                    progressWorkflowBtn.textContent = 'Advance to Next Phase';
+                                    alert(`Error: ${data.error || 'Unknown error'}`);
+                                } else if (isExport) {
+                                    exportBookBtn.disabled = false;
+                                    exportSpinner.style.display = 'none';
+                                    alert(`Error: ${data.error || 'Unknown error'}`);
+                                } else {
+                                    taskSpinner.style.display = 'none';
+                                    alert(`Task failed: ${data.error || 'Unknown error'}`);
+                                }
+                            }
+                            // Continue polling for 'running' status
+                        })
+                        .catch(error => {
+                            clearInterval(pollInterval);
+                            
+                            if (isWorkflowProgress) {
+                                progressWorkflowBtn.disabled = false;
+                                progressWorkflowBtn.textContent = 'Advance to Next Phase';
+                            } else if (isExport) {
+                                exportBookBtn.disabled = false;
+                                exportSpinner.style.display = 'none';
+                            } else {
+                                taskSpinner.style.display = 'none';
+                            }
+                            
+                            alert(`Error checking task status: ${error.message}`);
+                        });
+                }, 2000); // Check every 2 seconds
+            }
+        });
+    </script>
+</body>
+</html>

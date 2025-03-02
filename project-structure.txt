@@ -1,0 +1,39 @@
+inkharmony/
+├── app.py                   # Main application entry point
+├── agents/                  # Agent implementations
+│   ├── __init__.py
+│   ├── maestro.py           # Maestro agent (orchestrator)
+│   ├── outline.py           # Outline Architect agent
+│   ├── narrative.py         # Narrative Writer agent
+│   ├── linguistic.py        # Linguistic Polisher agent
+│   └── visual.py            # Visual Design Coordinator agent
+├── core/                    # Core system components
+│   ├── __init__.py
+│   ├── workflow.py          # Workflow management
+│   ├── messaging.py         # Agent communication
+│   └── storage.py           # Data storage utilities
+├── models/                  # Model integrations
+│   ├── __init__.py
+│   ├── claude.py            # Claude API integration
+│   └── stability.py         # Stability AI integration
+├── templates/               # Templates for agent prompts
+│   ├── maestro_templates.py
+│   ├── outline_templates.py
+│   ├── narrative_templates.py
+│   ├── linguistic_templates.py
+│   └── visual_templates.py
+├── utils/                   # Utility functions
+│   ├── __init__.py
+│   ├── file_utils.py        # File handling utilities
+│   └── logging_utils.py     # Logging utilities
+├── web/                     # Simple web interface
+│   ├── __init__.py
+│   ├── app.py               # Web server
+│   ├── routes.py            # API routes
+│   └── templates/           # HTML templates
+│       ├── index.html       # Main page
+│       ├── progress.html    # Progress tracking page
+│       └── review.html      # Content review page
+├── config.py                # Configuration settings
+├── requirements.txt         # Project dependencies
+└── README.md                # Project documentation

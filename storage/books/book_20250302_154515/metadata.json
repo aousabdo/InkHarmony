@@ -1,0 +1,14 @@
+{
+  "title": "The Quantum Cartographers",
+  "genre": "science_fiction",
+  "concept": "```json\n{\n  \"title\": \"The Quantum Cartographers: Mapping the Multiverse\",\n  \"genre\": {\n    \"primary\": \"science_fiction\",\n    \"sub_genres\": [\"multiverse_adventure\", \"techno_thriller\", \"coming_of_age\"]\n  },\n  \"concept\": \"In a near-future research facility, a brilliant but socially awkward young physicist named Alex Chen develops revolutionary 'quantum cartography' technology that can map and eventually create portals to alternate Earths across the multiverse. When Alex and a diverse team of young scientists begin exploring these parallel worlds, they discover a disturbing pattern: someone or something is methodically destroying alternate Earths, leaving behind distinctive energy signatures. As the destruction pattern approaches their own reality, the team must navigate complex multiverse politics, confront ethical dilemmas about interfering in other realities, and race to identify the destroyer before their Earth becomes the next target. Their journey challenges not only their understanding of physics but also their definitions of humanity, choice, and responsibility across infinite possibilities.\",\n  \"estimated_chapters\": 28,\n  \"character_count\": 7,\n  \"target_audience\": \"Young adults (15-25) with interest in accessible science fiction that balances complex scientific concepts with relatable characters and moral dilemmas. Appeals particularly to readers who enjoy speculative fiction with elements of adventure, discovery, and ethical exploration.\",\n  \"themes\": [\n    \"Multiverse theory and quantum physics\",\n    \"Responsibility of scientific discovery\",\n    \"Identity across infinite possibilities\",\n    \"Moral implications of interfering in alternate realities\",\n    \"Coming of age through extraordinary circumstances\",\n    \"Collaboration across different perspectives and specialties\",\n    \"Existential threats and humanity's response to crisis\",\n    \"The butterfly effect of small choices creating vastly different outcomes\"\n  ]\n}\n```",
+  "estimated_chapters": 10,
+  "character_count": 0,
+  "target_audience": "Young Adult",
+  "themes": [],
+  "book_id": "book_20250302_154515",
+  "status": "completed",
+  "current_phase": null,
+  "started_at": 1740948315.833458,
+  "completed_at": 1740948897.49333
+}

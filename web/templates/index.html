@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InkHarmony - AI Book Generation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            max-width: 200px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .book-card {
+            height: 100%;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span class="fw-bold">InkHarmony</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#create-book">Create Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#your-books">Your Books</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">InkHarmony</h1>
+            <p class="lead mb-4">Transform your ideas into complete books with the power of AI</p>
+            <a href="#create-book" class="btn btn-light btn-lg px-4 me-md-2">Create Your Book</a>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow card-hover">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">📝</div>
+                        <h5 class="card-title">AI-Powered Writing</h5>
+                        <p class="card-text">Our advanced AI agents collaborate to create cohesive, high-quality books tailored to your specifications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow card-hover">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">🎨</div>
+                        <h5 class="card-title">Cover Art Generation</h5>
+                        <p class="card-text">Automatically generate professional book covers that perfectly capture your story's essence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow card-hover">
+                    <div class="card-body text-center">
+                        <div class="feature-icon">📚</div>
+                        <h5 class="card-title">Complete Package</h5>
+                        <p class="card-text">From outline to final manuscript, get everything you need to bring your book to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="create-book" class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-header bg-primary text-white">
+                            <h3 class="mb-0">Create a New Book</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="/create_book" method="POST">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Book Title</label>
+                                    <input type="text" class="form-control" id="title" name="title" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="genre" class="form-label">Genre</label>
+                                    <select class="form-select" id="genre" name="genre" required>
+                                        {% for genre in genres %}
+                                        <option value="{{ genre }}">{{ genre.replace('_', ' ').title() }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Book Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="3" placeholder="Describe your book concept..."></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="style" class="form-label">Writing Style</label>
+                                    <select class="form-select" id="style" name="style">
+                                        <option value="descriptive">Descriptive</option>
+                                        <option value="concise">Concise</option>
+                                        <option value="poetic">Poetic</option>
+                                        <option value="conversational">Conversational</option>
+                                        <option value="formal">Formal</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="target_audience" class="form-label">Target Audience</label>
+                                    <select class="form-select" id="target_audience" name="target_audience">
+                                        <option value="General">General</option>
+                                        <option value="Young Adult">Young Adult</option>
+                                        <option value="Children">Children</option>
+                                        <option value="Adults">Adults</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Create Book</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="your-books" class="mb-5">
+            <h2 class="mb-4">Your Books</h2>
+            
+            {% if books %}
+            <div class="row">
+                {% for book in books %}
+                <div class="col-md-4 mb-4">
+                    <div class="card book-card shadow">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">
+                                <span class="badge bg-secondary">{{ book.genre }}</span>
+                                <span class="badge bg-{{ 'success' if book.status == 'completed' else 'primary' if book.status == 'running' else 'warning' }}">{{ book.status }}</span>
+                            </p>
+                            <p class="card-text small">Created: {{ book.created_at | int | strftime }}</p>
+                            <a href="/book/{{ book.book_id }}" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="alert alert-info">
+                You haven't created any books yet. Use the form above to get started!
+            </div>
+            {% endif %}
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>© 2025 InkHarmony. Powered by Claude and Stability AI.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Helper function to format timestamps
+        document.addEventListener('DOMContentLoaded', function() {
+            const timestampElements = document.querySelectorAll('.timestamp');
+            timestampElements.forEach(function(element) {
+                const timestamp = parseInt(element.getAttribute('data-timestamp'));
+                if (timestamp) {
+                    const date = new Date(timestamp * 1000);
+                    element.textContent = date.toLocaleString();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

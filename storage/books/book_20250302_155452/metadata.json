@@ -1,0 +1,14 @@
+{
+  "title": "The Quantum Cartographers",
+  "genre": "science_fiction",
+  "concept": "```json\n{\n  \"title\": \"The Quantum Cartographers: Mapping the Multiverse\",\n  \"genre\": {\n    \"primary\": \"science_fiction\",\n    \"sub_genres\": [\"multiverse_fiction\", \"techno_thriller\", \"adventure\"]\n  },\n  \"concept\": \"In a near-future MIT laboratory, a brilliant team of young scientists develops the Quantum Cartography Engine (QCE), revolutionary technology that allows them to map and navigate the infinite multiverse. Led by physics prodigy Eliza Chen, the team discovers they can observe—and eventually visit—countless alternate Earths where history took different paths.\\n\\nTheir excitement turns to horror when they detect a pattern of alternate Earths mysteriously vanishing from the quantum map. As they investigate, they discover an enigmatic entity systematically destroying these realities, working its way toward their own Earth. With time running out, the team must use their technology to track the destroyer across dimensions, understand its motives, and find a way to save not just their world, but the entire multiverse—all while confronting ethical dilemmas about their responsibility to alternate versions of themselves and questioning the very nature of reality.\",\n  \"estimated_chapters\": 32,\n  \"character_count\": 7,\n  \"target_audience\": \"Young adults (15-25) with interest in scientific concepts, parallel universes, and ethical dilemmas, particularly those who enjoy accessible science fiction that balances technical concepts with character-driven storytelling and moral questions\",\n  \"themes\": [\n    \"Scientific responsibility and ethics\",\n    \"Multiverse theory and quantum physics\",\n    \"Identity and the road not taken\",\n    \"Existential threat and cooperation\",\n    \"The butterfly effect of choices\",\n    \"The nature of reality and perception\",\n    \"Coming of age through crisis\"\n  ]\n}\n```",
+  "estimated_chapters": 10,
+  "character_count": 0,
+  "target_audience": "Young Adult",
+  "themes": [],
+  "book_id": "book_20250302_155452",
+  "status": "running",
+  "current_phase": "initialization",
+  "started_at": 1740948892.3132648,
+  "completed_at": null
+}

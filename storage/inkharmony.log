@@ -1,0 +1,502 @@
+2025-03-02 12:51:45,420 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:51:45,424 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:51:45,424 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:51:45,424 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:51:45,424 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:51:45,424 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:51:45,424 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:51:45,425 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:51:45,425 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:51:45,425 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:51:45,425 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:51:45,425 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:51:45,425 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:51:45,425 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:51:45,425 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:51:45,425 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:51:45,425 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:51:45,426 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:51:45,497 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 12:51:45,497 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 12:51:45,498 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:51:45,979 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:51:45,981 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:51:45,981 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:51:45,981 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:51:45,981 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:51:45,981 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:51:45,981 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:51:45,981 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:51:45,981 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:51:45,981 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:51:45,981 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:51:45,982 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:51:45,982 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:51:45,982 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:51:45,982 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:51:45,982 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:51:45,982 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:51:45,982 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:51:46,015 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:51:46,250 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 12:51:53,378 - werkzeug - INFO -  * Detected change in '/Users/aousabdo/Library/CloudStorage/GoogleDrive-aousabdo@gmail.com/My_Drive/InkHarmony/agents/maestro.py', reloading
+2025-03-02 12:51:53,448 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:51:53,900 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:51:53,902 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:51:53,902 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:51:53,902 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:51:53,902 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:51:53,902 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:51:53,902 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:51:53,902 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:51:53,902 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:51:53,903 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:51:53,903 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:51:53,903 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:51:53,903 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:51:53,903 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:51:53,903 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:51:53,903 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:51:53,903 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:51:53,903 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:51:53,938 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:51:53,954 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 12:52:19,798 - werkzeug - INFO -  * Detected change in '/Users/aousabdo/Library/CloudStorage/GoogleDrive-aousabdo@gmail.com/My_Drive/InkHarmony/inkharmony.py', reloading
+2025-03-02 12:52:19,892 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:52:20,544 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:52:20,546 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:52:20,546 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:52:20,546 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:52:20,546 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:52:20,546 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:52:20,546 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:52:20,546 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:52:20,546 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:52:20,547 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:52:20,547 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:52:20,547 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:52:20,547 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:52:20,547 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:52:20,547 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:52:20,547 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:52:20,547 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:52:20,548 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:52:20,589 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:52:20,607 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 12:52:43,639 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:52:43,641 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:52:43,641 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:52:43,641 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:52:43,641 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:52:43,641 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:52:43,641 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:52:43,641 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:52:43,641 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:52:43,641 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:52:43,642 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:52:43,642 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:52:43,642 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:52:43,642 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:52:43,642 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:52:43,642 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:52:43,642 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:52:43,642 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:52:43,694 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 12:52:43,695 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 12:52:43,696 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 12:52:44,102 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 12:52:44,103 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 12:52:44,103 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 12:52:44,103 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 12:52:44,103 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 12:52:44,103 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 12:52:44,103 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 12:52:44,104 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 12:52:44,104 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 12:52:44,104 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 12:52:44,104 - inkharmony - INFO - Started outline agent thread
+2025-03-02 12:52:44,104 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 12:52:44,104 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 12:52:44,104 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 12:52:44,105 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 12:52:44,105 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 12:52:44,105 - inkharmony - INFO - Started visual agent thread
+2025-03-02 12:52:44,105 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 12:52:44,135 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 12:52:44,163 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 12:52:54,795 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:52:54] "GET / HTTP/1.1" 200 -
+2025-03-02 12:52:54,951 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:52:54] "GET /static/style.css HTTP/1.1" 200 -
+2025-03-02 12:52:55,379 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 12:52:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-02 15:41:48,928 - inkharmony - INFO - Creating new book: The Quantum Cartographers
+2025-03-02 15:41:48,935 - agents.maestro - ERROR - Error initializing book: 'NoneType' object has no attribute 'user_message'
+2025-03-02 15:41:48,935 - inkharmony - ERROR - Error creating book: Failed to initialize book
+2025-03-02 15:41:48,935 - __main__ - ERROR - Error creating book: Failed to initialize book
+2025-03-02 15:41:48,953 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:48] "[35m[1mPOST /create_book HTTP/1.1[0m" 500 -
+2025-03-02 15:41:49,004 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:49] "GET /create_book?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-02 15:41:49,016 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:49] "GET /create_book?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-02 15:41:49,228 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:49] "GET /create_book?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-02 15:41:49,237 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:49] "GET /create_book?__debugger__=yes&cmd=resource&f=console.png&s=i6NHwbnNRfaCHaCu40vZ HTTP/1.1" 200 -
+2025-03-02 15:41:49,454 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:41:49] "[36mGET /create_book?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-02 15:42:12,029 - werkzeug - INFO -  * To enable the debugger you need to enter the security pin:
+2025-03-02 15:42:12,030 - werkzeug - INFO -  * Debugger pin code: 653-307-852
+2025-03-02 15:42:12,032 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:42:12] "GET /create_book?__debugger__=yes&cmd=printpin&s=i6NHwbnNRfaCHaCu40vZ HTTP/1.1" 200 -
+2025-03-02 15:44:06,212 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:44:06,218 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:44:06,218 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:44:06,218 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:44:06,218 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:44:06,218 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:44:06,218 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:44:06,219 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:44:06,219 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:44:06,219 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:44:06,219 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:44:06,220 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:44:06,220 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:44:06,220 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:44:06,220 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:44:06,221 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:44:06,221 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:44:06,221 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:44:06,274 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 15:44:06,275 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 15:44:06,276 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 15:44:06,699 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:44:06,701 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:44:06,701 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:44:06,701 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:44:06,701 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:44:06,701 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:44:06,701 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:44:06,701 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:44:06,702 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:44:06,702 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:44:06,702 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:44:06,702 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:44:06,702 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:44:06,702 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:44:06,702 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:44:06,702 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:44:06,702 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:44:06,702 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:44:06,733 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 15:44:06,757 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 15:44:21,803 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:44:21] "GET / HTTP/1.1" 200 -
+2025-03-02 15:44:21,891 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:44:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-02 15:45:06,763 - inkharmony - INFO - Creating new book: The Quantum Cartographers
+2025-03-02 15:45:15,809 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:45:15,833 - core.workflow - INFO - Started phase: initialization for book book_20250302_154515
+2025-03-02 15:45:15,834 - inkharmony - INFO - Successfully created book with ID: book_20250302_154515
+2025-03-02 15:45:15,835 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:15] "[32mPOST /create_book HTTP/1.1[0m" 302 -
+2025-03-02 15:45:15,866 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:15] "GET /book/book_20250302_154515 HTTP/1.1" 200 -
+2025-03-02 15:45:15,968 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-02 15:45:25,685 - inkharmony - INFO - Progressing workflow for book book_20250302_154515 with action: next
+2025-03-02 15:45:25,687 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:25] "POST /book/book_20250302_154515/progress HTTP/1.1" 200 -
+2025-03-02 15:45:27,699 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:27] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:29,698 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:29] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:31,696 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:31] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:32,487 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:45:32,491 - core.workflow - INFO - Completed phase: initialization for book book_20250302_154515
+2025-03-02 15:45:32,491 - core.workflow - INFO - Started phase: outline_creation for book book_20250302_154515
+2025-03-02 15:45:33,693 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:33] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:35,695 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:35] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:37,698 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:37] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:39,693 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:39] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:41,696 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:41] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:43,693 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:43] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:45,693 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:45] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:47,799 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:47] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:49,796 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:49] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:51,800 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:51] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:53,797 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:53] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:55,791 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:55] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:45:55,958 - inkharmony - ERROR - Error progressing workflow: Timed out waiting for workflow progression
+2025-03-02 15:45:55,958 - __main__ - ERROR - Error in background task progress_1740948325: Timed out waiting for workflow progression
+2025-03-02 15:45:57,791 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:45:57] "GET /task_status/progress_1740948325 HTTP/1.1" 200 -
+2025-03-02 15:46:08,828 - inkharmony - INFO - Progressing workflow for book book_20250302_154515 with action: next
+2025-03-02 15:46:08,829 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:08] "POST /book/book_20250302_154515/progress HTTP/1.1" 200 -
+2025-03-02 15:46:10,837 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:10] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:12,836 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:12] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:14,836 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:14] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:15,087 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:46:15,095 - core.workflow - INFO - Completed phase: outline_creation for book book_20250302_154515
+2025-03-02 15:46:15,095 - core.workflow - INFO - Started phase: content_creation for book book_20250302_154515
+2025-03-02 15:46:16,848 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:16] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:19,204 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:19] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:20,840 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:20] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:22,835 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:22] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:24,837 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:24] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:26,836 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:26] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:28,835 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:28] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:30,836 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:30] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:32,838 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:32] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:34,838 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:34] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:36,840 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:36] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:38,836 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:38] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:39,082 - inkharmony - ERROR - Error progressing workflow: Timed out waiting for workflow progression
+2025-03-02 15:46:39,082 - __main__ - ERROR - Error in background task progress_1740948368: Timed out waiting for workflow progression
+2025-03-02 15:46:40,838 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:40] "GET /task_status/progress_1740948368 HTTP/1.1" 200 -
+2025-03-02 15:46:45,786 - inkharmony - INFO - Progressing workflow for book book_20250302_154515 with action: next
+2025-03-02 15:46:45,787 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:45] "POST /book/book_20250302_154515/progress HTTP/1.1" 200 -
+2025-03-02 15:46:47,804 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:47] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:50,790 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:50] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:52,784 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:52] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:52,872 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:46:52,875 - core.workflow - INFO - Completed phase: content_creation for book book_20250302_154515
+2025-03-02 15:46:52,875 - core.workflow - INFO - Started phase: review_refinement for book book_20250302_154515
+2025-03-02 15:46:53,796 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:53] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:55,794 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:55] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:57,795 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:57] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:46:59,793 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:46:59] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:01,797 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:01] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:03,802 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:03] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:05,801 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:05] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:07,800 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:07] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:09,796 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:09] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:11,799 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:11] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:13,095 - inkharmony - INFO - Assigning task to outline for book book_20250302_154515
+2025-03-02 15:47:13,096 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:13] "POST /book/book_20250302_154515/assign_task HTTP/1.1" 200 -
+2025-03-02 15:47:13,796 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:13] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:15,103 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:15] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:15,798 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:15] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:16,084 - inkharmony - ERROR - Error progressing workflow: Timed out waiting for workflow progression
+2025-03-02 15:47:16,085 - __main__ - ERROR - Error in background task progress_1740948405: Timed out waiting for workflow progression
+2025-03-02 15:47:17,102 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:17] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:17,795 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:17] "GET /task_status/progress_1740948405 HTTP/1.1" 200 -
+2025-03-02 15:47:20,220 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:20] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:21,113 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:21] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:23,793 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:23] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:25,410 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:47:25,421 - agents.outline - INFO - Handling task: a128fc3d-e007-41c5-a4da-7bf336cc2fcf
+2025-03-02 15:47:25,519 - agents.maestro - ERROR - Error from outline: Unknown task type: agent_task
+2025-03-02 15:47:25,810 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:25] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:27,100 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:27] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:29,103 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:29] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:31,106 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:31] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:33,103 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:33] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:35,111 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:35] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:37,102 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:37] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:39,104 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:39] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:39,720 - inkharmony - INFO - Progressing workflow for book book_20250302_154515 with action: next
+2025-03-02 15:47:39,721 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:39] "POST /book/book_20250302_154515/progress HTTP/1.1" 200 -
+2025-03-02 15:47:41,102 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:41] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:41,727 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:41] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:47:43,209 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:43] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:43,251 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:47:43,252 - core.workflow - INFO - Completed phase: review_refinement for book book_20250302_154515
+2025-03-02 15:47:43,252 - core.workflow - INFO - Started phase: production for book book_20250302_154515
+2025-03-02 15:47:43,338 - inkharmony - ERROR - Error assigning task: Timed out waiting for task assignment
+2025-03-02 15:47:43,338 - __main__ - ERROR - Error in background task task_1740948433: Timed out waiting for task assignment
+2025-03-02 15:47:43,730 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:43] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:47:45,105 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:45] "GET /task_status/task_1740948433 HTTP/1.1" 200 -
+2025-03-02 15:47:48,168 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:48] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:47:49,736 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:49] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:47:51,793 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:51] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:47:53,796 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:47:53] "GET /task_status/progress_1740948459 HTTP/1.1" 200 -
+2025-03-02 15:50:48,875 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:50:48,877 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:50:48,877 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:50:48,878 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:50:48,878 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:50:48,878 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:50:48,878 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:50:48,878 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:50:48,878 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:50:48,878 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:50:48,878 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:50:48,878 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:50:48,878 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:50:48,879 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:50:48,879 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:50:48,879 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:50:48,879 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:50:48,879 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:50:48,938 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 15:50:48,938 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 15:50:48,939 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 15:50:49,404 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:50:49,409 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:50:49,409 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:50:49,409 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:50:49,409 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:50:49,409 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:50:49,409 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:50:49,409 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:50:49,409 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:50:49,409 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:50:49,409 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:50:49,410 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:50:49,410 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:50:49,411 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:50:49,412 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:50:49,412 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:50:49,412 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:50:49,412 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:50:49,459 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 15:50:49,511 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 15:51:00,452 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-03-02 15:51:00,503 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-02 15:51:00,515 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-02 15:51:00,682 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=bA39Iv1n7tJVZrx1we55 HTTP/1.1" 200 -
+2025-03-02 15:51:00,682 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-02 15:51:00,946 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:51:00] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-03-02 15:52:21,270 - werkzeug - INFO -  * Detected change in '/Users/aousabdo/Library/CloudStorage/GoogleDrive-aousabdo@gmail.com/My_Drive/InkHarmony/core/storage.py', reloading
+2025-03-02 15:52:21,370 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 15:52:22,023 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:52:22,025 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:52:22,025 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:52:22,025 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:52:22,025 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:52:22,025 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:52:22,025 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:52:22,025 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:52:22,025 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:52:22,026 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:52:22,026 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:52:22,026 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:52:22,026 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:52:22,148 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:52:22,148 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:52:22,149 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:52:22,149 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:52:22,149 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:52:22,216 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 15:52:22,232 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 15:52:31,539 - werkzeug - INFO -  * Detected change in '/Users/aousabdo/Library/CloudStorage/GoogleDrive-aousabdo@gmail.com/My_Drive/InkHarmony/core/storage.py', reloading
+2025-03-02 15:52:31,616 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 15:52:32,189 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:52:32,191 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:52:32,191 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:52:32,191 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:52:32,191 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:52:32,191 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:52:32,191 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:52:32,191 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:52:32,191 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:52:32,191 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:52:32,192 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:52:32,192 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:52:32,192 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:52:32,192 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:52:32,192 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:52:32,192 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:52:32,192 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:52:32,192 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:52:32,227 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 15:52:32,249 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 15:52:33,380 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:52:33,382 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:52:33,382 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:52:33,382 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:52:33,382 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:52:33,382 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:52:33,382 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:52:33,383 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:52:33,383 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:52:33,383 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:52:33,383 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:52:33,383 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:52:33,383 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:52:33,383 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:52:33,383 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:52:33,384 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:52:33,384 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:52:33,384 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:52:40,240 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:52:40,242 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:52:40,242 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:52:40,242 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:52:40,242 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:52:40,242 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:52:40,242 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:52:40,243 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:52:40,243 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:52:40,243 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:52:40,243 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:52:40,243 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:52:40,244 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:52:40,244 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:52:40,244 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:52:40,244 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:52:40,244 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:52:40,244 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:53:58,854 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:53:58,856 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:53:58,856 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:53:58,856 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:53:58,856 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:53:58,856 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:53:58,856 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:53:58,857 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:53:58,857 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:53:58,857 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:53:58,857 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:53:58,857 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:53:58,857 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:53:58,857 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:53:58,858 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:53:58,858 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:53:58,858 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:53:58,858 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:53:58,910 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-02 15:53:58,910 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-03-02 15:53:58,911 - werkzeug - INFO -  * Restarting with stat
+2025-03-02 15:53:59,414 - inkharmony - INFO - InkHarmony system initializing...
+2025-03-02 15:53:59,416 - inkharmony - INFO - Starting InkHarmony agents...
+2025-03-02 15:53:59,416 - agents.maestro - INFO - Maestro Agent initialized with ID: maestro
+2025-03-02 15:53:59,416 - agents.outline - INFO - Outline Architect Agent initialized with ID: outline
+2025-03-02 15:53:59,416 - agents.narrative - INFO - Narrative Writer Agent initialized with ID: narrative
+2025-03-02 15:53:59,416 - agents.linguistic - INFO - Linguistic Polisher Agent initialized with ID: linguistic
+2025-03-02 15:53:59,416 - agents.visual - INFO - Visual Design Coordinator Agent initialized with ID: visual
+2025-03-02 15:53:59,416 - agents.maestro - INFO - Maestro Agent maestro started
+2025-03-02 15:53:59,417 - inkharmony - INFO - Started maestro agent thread
+2025-03-02 15:53:59,417 - agents.outline - INFO - Outline Architect Agent outline started
+2025-03-02 15:53:59,417 - inkharmony - INFO - Started outline agent thread
+2025-03-02 15:53:59,417 - agents.narrative - INFO - Narrative Writer Agent narrative started
+2025-03-02 15:53:59,417 - inkharmony - INFO - Started narrative agent thread
+2025-03-02 15:53:59,417 - agents.linguistic - INFO - Linguistic Polisher Agent linguistic started
+2025-03-02 15:53:59,417 - inkharmony - INFO - Started linguistic agent thread
+2025-03-02 15:53:59,417 - agents.visual - INFO - Visual Design Coordinator Agent visual started
+2025-03-02 15:53:59,417 - inkharmony - INFO - Started visual agent thread
+2025-03-02 15:53:59,417 - inkharmony - INFO - InkHarmony system initialized successfully
+2025-03-02 15:53:59,457 - werkzeug - WARNING -  * Debugger is active!
+2025-03-02 15:53:59,482 - werkzeug - INFO -  * Debugger PIN: 653-307-852
+2025-03-02 15:54:08,216 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:08] "GET / HTTP/1.1" 200 -
+2025-03-02 15:54:08,278 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-02 15:54:43,852 - inkharmony - INFO - Creating new book: The Quantum Cartographers
+2025-03-02 15:54:49,138 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:49] "GET /book/book_20250302_154515 HTTP/1.1" 200 -
+2025-03-02 15:54:49,175 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-03-02 15:54:52,291 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:54:52,313 - core.workflow - INFO - Started phase: initialization for book book_20250302_155452
+2025-03-02 15:54:52,313 - inkharmony - INFO - Successfully created book with ID: book_20250302_155452
+2025-03-02 15:54:52,314 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:52] "[32mPOST /create_book HTTP/1.1[0m" 302 -
+2025-03-02 15:54:53,581 - inkharmony - INFO - Progressing workflow for book book_20250302_154515 with action: next
+2025-03-02 15:54:53,582 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:53] "POST /book/book_20250302_154515/progress HTTP/1.1" 200 -
+2025-03-02 15:54:55,591 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:55] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:54:57,490 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-02 15:54:57,493 - core.workflow - INFO - Completed phase: production for book book_20250302_154515
+2025-03-02 15:54:57,589 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:57] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:54:59,590 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:54:59] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:01,591 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:01] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:03,592 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:03] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:05,592 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:05] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:07,592 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:07] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:09,600 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:09] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:11,797 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:11] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:13,590 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:13] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:15,592 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:15] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:17,811 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:17] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:19,792 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:19] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:21,791 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:21] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:23,795 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:23] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:23,827 - inkharmony - ERROR - Error progressing workflow: Timed out waiting for workflow progression
+2025-03-02 15:55:23,827 - __main__ - ERROR - Error in background task progress_1740948893: Timed out waiting for workflow progression
+2025-03-02 15:55:25,621 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:25] "GET /task_status/progress_1740948893 HTTP/1.1" 200 -
+2025-03-02 15:55:30,385 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:30] "POST /book/book_20250302_154515/export HTTP/1.1" 200 -
+2025-03-02 15:55:32,458 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:32] "GET /task_status/export_1740948930 HTTP/1.1" 200 -
+2025-03-02 15:55:50,058 - werkzeug - INFO - 127.0.0.1 - - [02/Mar/2025 15:55:50] "[33mGET /book/book_20250302_154515/download?type=txt HTTP/1.1[0m" 404 -
