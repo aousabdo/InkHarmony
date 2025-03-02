@@ -240,6 +240,7 @@ def download_book(book_id):
     from core.storage import BookStorage
     
     file_type = request.args.get('type', 'txt')
+    logger.info(f"Download requested for book {book_id}, type: {file_type}")
     
     try:
         storage = BookStorage(book_id)
@@ -250,15 +251,24 @@ def download_book(book_id):
             # Compile all chapters into a single text file
             chapters = []
             i = 1
+            
+            # Log available components
+            components = storage.list_components()
+            logger.info(f"Available components for book {book_id}: {components}")
+            
             while True:
-                chapter = storage.load_component(f"chapter_{i}")
+                chapter_name = f"chapter_{i}"
+                logger.info(f"Attempting to load component: {chapter_name}")
+                chapter = storage.load_component(chapter_name)
                 if not chapter:
+                    logger.info(f"No more chapters found after {i-1} chapters")
                     break
                 chapters.append(f"CHAPTER {i}\n\n{chapter}\n\n")
                 i += 1
             
             if not chapters:
-                return jsonify({"error": "No chapters found"}), 404
+                logger.error(f"No chapters found for book {book_id}")
+                return jsonify({"error": "No chapters found. The book content may not be fully generated yet."}), 404
                 
             # Create a temp file
             temp_path = os.path.join(os.path.dirname(__file__), "static", "temp", f"{title}.txt")
@@ -267,7 +277,8 @@ def download_book(book_id):
             with open(temp_path, 'w', encoding='utf-8') as f:
                 f.write(f"{title}\n\n")
                 f.write("\n\n".join(chapters))
-                
+            
+            logger.info(f"Successfully created text file for download: {temp_path}")
             return send_file(temp_path, as_attachment=True, download_name=f"{title}.txt")
             
         elif file_type == 'json':
@@ -280,14 +291,16 @@ def download_book(book_id):
             
             with open(temp_path, 'w', encoding='utf-8') as f:
                 json.dump(book_content, f, indent=2)
-                
+            
+            logger.info(f"Successfully created JSON file for download: {temp_path}")
             return send_file(temp_path, as_attachment=True, download_name=f"{title}.json")
             
         elif file_type == 'cover':
             # Download the cover image
             cover_data = storage.load_image("cover", "png")
             if not cover_data:
-                return jsonify({"error": "Cover not found"}), 404
+                logger.error(f"Cover image not found for book {book_id}")
+                return jsonify({"error": "Cover not found. The cover may not be generated yet."}), 404
                 
             # Create a temp file
             temp_path = os.path.join(os.path.dirname(__file__), "static", "temp", f"{title}_cover.png")
@@ -295,14 +308,16 @@ def download_book(book_id):
             
             with open(temp_path, 'wb') as f:
                 f.write(cover_data)
-                
+            
+            logger.info(f"Successfully created cover image for download: {temp_path}")
             return send_file(temp_path, as_attachment=True, download_name=f"{title}_cover.png")
                 
         else:
+            logger.warning(f"Unsupported file type requested: {file_type}")
             return jsonify({"error": "Unsupported file type"}), 400
             
     except Exception as e:
-        logger.error(f"Error downloading book: {str(e)}")
+        logger.error(f"Error downloading book {book_id}: {str(e)}", exc_info=True)
         return jsonify({"error": str(e)}), 500
 
 @app.route('/task_status/<task_id>', methods=['GET'])
